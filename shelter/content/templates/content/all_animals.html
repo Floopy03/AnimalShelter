@@ -1,0 +1,25 @@
+{% extends 'content/main.html' %}
+<!-- {% load static %} -->
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'content/css/all_animals.css' %}">
+{% endblock %}
+
+{% block main %}
+
+
+    {% for each in animal %}
+
+    <article>
+        <img class = 'photo' src="{{ each.photo.url }}" alt="">
+
+        {{each.name}}
+        <h1 class = 'description'>
+            {{each.age}}
+        </h1>
+    </article>
+        
+    {% endfor %}
+
+
+{% endblock %}

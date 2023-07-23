@@ -80,15 +80,33 @@ main {
     width: 80%;
     height: 92vh;
 
+
 }
 
-.description-shelter {
+article {
     display: flex;
-    width: 85%;
-    border: 2px solid #4F6457;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 0.8%;
+    margin-top: 0.5%;
+    background: #E29930;
+    width: 90%;
+    height: 19%;
     border-radius: 15px;
-    padding: 2%;
-    background: #506D2F;
-    color: #D0E1F9;
+    overflow: hidden;
 }
 
+.description {
+    display: flex;
+    font-size: 15px;
+}
+
+
+.photo {
+    display: flex;
+    height: min-content;
+    max-width: 100px; /* Наприклад, встановимо максимальну ширину 100px */
+    max-height: 122px;
+    flex-shrink: 0; /* Це запобігає стисканню фото в залежності від розміру article */
+    border-radius: 15px;
+}

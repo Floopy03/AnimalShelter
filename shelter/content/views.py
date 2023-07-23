@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .models import Animal
+from .models import Animal, Kind
+
 
 
 def main(request):
@@ -17,11 +18,13 @@ def main(request):
 def second(request):
     
     all = Animal.objects.all()
+    kind_of = Kind.objects.all()
 
     context = {
-        'all_animal' : all,
+        'animal' : all,
+        'kind' : kind_of,
     }
 
-    return render(request, 'content/onse_animal.html', context)
+    return render(request, 'content/all_animals.html', context)
 
 
