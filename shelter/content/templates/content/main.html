@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    {% block css %}
+      <link rel="stylesheet" href="{% static 'content/css/main.css' %}">
+    {% endblock %}
+
+</head>
+    <body>
+
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="logo-link navbar-brand" href="{% url 'start' %}"><img class = 'logo' src="{% static 'content/pictures/logo.jfif' %}" alt=""></a>
+          <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="{% url 'start' %}">Про притулок</a>
+              <a class="nav-link" href="{% url 'onse_animal' %}">Контакти</a>
+
+              <button type="button" class="first_but position-absolute top-50 end-0 translate-middle-y">Вхід</button>
+
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    
+    <div class = main_div>
+
+      <aside>
+        <div class = 'top'>
+
+          <a href = '#' class = 'menu-link'><img src="" alt=".">Всі тварини</a>
+          <a href = '#' class = 'menu-link'><img src="" alt=".">Собаки</a>
+          <a href = '#' class = 'menu-link'><img src="" alt=".">Кішки</a>
+          
+        </div>
+        <div class = 'bot'>
+
+          <a href = '#' class = 'authorization-link'>Ви не авторизувались</a>
+
+        </div>
+      </aside>
+      
+      <main>
+        {% block main %}
+          <h1>info about shelter</h1>
+          <h4 class = 'description-shelter'>Добро пожаловать в приют для животных "Счастливые Лапы"!
+             Мы открылись в 2010 году с миссией предоставить безопасное и заботливое убежище для бездомных и заброшенных животных. 
+             Наш приют расположен в живописном месте с просторными вольерами и зелеными пастбищами.
+
+            Мы занимаемся помощью различным видам животных, таким как собаки, кошки, кролики и птицы. 
+            Наша команда состоит из опытных ветеринаров, сотрудников и добровольцев, которые заботятся о наших подопечных.
+            
+            На данный момент в нашем приюте проживает более 100 животных, и число постоянно меняется, 
+            так как мы постоянно принимаем новых подопечных и находим им ответственных и заботливых хозяев.
+            
+            В "Счастливые Лапы" мы делаем все возможное, чтобы обеспечить нашим животным комфортные условия и медицинское обслуживание. 
+            Мы также проводим кампании по социализации и тренировке наших животных, чтобы улучшить их шансы на успешное усыновление.
+            
+            Мы приглашаем всех, кто ищет верного друга и хочет дать дом бездомному животному, посетить наш приют. 
+            Мы верим, что каждое животное заслуживает любящий дом, и мы делаем все возможное, чтобы помочь им найти его.
+            
+            Спасибо, что поддерживаете нашу миссию! Ваша помощь и поддержка помогают нам делать мир лучше для наших милых питомцев.
+            
+            С уважением,
+            Команда приюта для животных "Счастливые Лапы".</h4>
+        {% endblock %}
+      </main>
+    </div>
+        
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
+</html>
