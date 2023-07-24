@@ -2,7 +2,7 @@
 <!-- {% load static %} -->
 
 {% block css %}
-    <link rel="stylesheet" href="{% static 'content/css/all_animals.css' %}">
+    <link rel="stylesheet" href="{% static 'content/css/all_animals1.css' %}">
 {% endblock %}
 
 {% block main %}
@@ -13,9 +13,17 @@
     <article>
         <img class = 'photo' src="{{ each.photo.url }}" alt="">
 
-        {{each.name}}
+        <section class = 'info'>
+            <div class = 'person-info'>
+                <p class = 'animal-name'>{{each.name}}</p>
+                <p class = 'animal-old'>{{each.age}}</p>
+            </div>
+            <button class = 'animal-details-but'>Перейти</button>
+        </section>
+
+        
         <h1 class = 'description'>
-            {{each.age}}
+            {{each.description}}
         </h1>
     </article>
         

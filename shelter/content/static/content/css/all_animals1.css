@@ -87,6 +87,7 @@ article {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     padding-left: 0.8%;
     margin-top: 0.5%;
     background: #E29930;
@@ -96,9 +97,67 @@ article {
     overflow: hidden;
 }
 
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    height: 90%;
+    width: 9%;
+}
+
+.person-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.animal-name {
+    padding: 0;
+    margin: 0;
+}
+
+.animal-old {
+    padding: 0;
+    margin: 0;
+}
+
+
+.animal-details-but {
+    width: 90%;
+    font-size: 13px;
+    padding: 0;
+    background: #75B1A9;
+    border-radius: 14px;
+    border: none;
+    color: #1a5b62;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: bold;
+}
+
+
+.animal-details-but:hover {
+    background: #ACD0C0;
+    transition: all 0.5s;
+    transform: scale(1.08);
+}
+
+.animal-details-but:active {
+    background: #ACD0C0;
+    transform: scale(0.95);
+}
+
+
 .description {
     display: flex;
+    width: 80%;
     font-size: 15px;
+    margin-right: 1%;
 }
 
 

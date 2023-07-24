@@ -20,7 +20,7 @@ class Animal(models.Model):
     sex = models.CharField(max_length = 1, choices = SEX_CHOICES, default = 'B')
     name = models.CharField(max_length = 30)
     old = models.IntegerField(default = 1)
-    description = models.TextField()
+    description = models.TextField()                    #550
     photo = models.ImageField(null = True, blank = True, upload_to = 'images/')
 
 
