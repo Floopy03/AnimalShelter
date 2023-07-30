@@ -1,5 +1,5 @@
 {% extends 'content/main.html' %}
-<!-- {% load static %} -->
+{% load static %}
 
 {% block css %}
     <link rel="stylesheet" href="{% static 'content/css/all_animals1.css' %}">
@@ -18,7 +18,7 @@
                 <p class = 'animal-name'>{{each.name}}</p>
                 <p class = 'animal-old'>{{each.age}}</p>
             </div>
-            <button class = 'animal-details-but'>Перейти</button>
+            <button class = 'animal-details-but'><a href="{{ each.get_absolute_url }}">Перейти</a></button>
         </section>
 
         

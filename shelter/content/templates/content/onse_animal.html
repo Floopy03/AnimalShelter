@@ -1,0 +1,13 @@
+{% extends 'content/main.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'content/css/onse_animal1.css' %}">
+{% endblock %}
+
+
+{% block main %}
+
+<h2>{{ animal.name }}</h2>
+
+{% endblock %}

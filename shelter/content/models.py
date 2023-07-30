@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Kind(models.Model):
@@ -37,6 +38,10 @@ class Animal(models.Model):
                 return f'{self.old} місяці'
             else:
                 return f'{self.old} місяців'
+            
+
+    def get_absolute_url(self):
+        return reverse("one_animal", kwargs = {'animal_pk': self.pk})
 
 
                 

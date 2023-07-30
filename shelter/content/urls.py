@@ -1,11 +1,9 @@
 from django.urls import path 
 from . import views 
-from django.conf import settings 
-from django.conf.urls.static import static 
 
 
 urlpatterns = [ 
     path('', views.main, name = 'start'),
-    path('all/', views.second, name = 'all_animals')
-
+    path('all/', views.show_all, name = 'all_animals'),
+    path('one_animal/<int:animal_pk>/', views.onse_animal, name='one_animal'),
     ]

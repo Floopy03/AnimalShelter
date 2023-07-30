@@ -3,6 +3,7 @@ from .models import Animal, Kind
 
 
 
+
 def main(request):
     
     all = Animal.objects.all()
@@ -15,16 +16,26 @@ def main(request):
 
 
 
-def second(request):
+def show_all(request):
     
     all = Animal.objects.all()
-    kind_of = Kind.objects.all()
+
 
     context = {
         'animal' : all,
-        'kind' : kind_of,
     }
 
     return render(request, 'content/all_animals.html', context)
+
+
+def onse_animal(request, animal_pk):
+    
+    context = {
+        'animal': Animal.objects.get(pk = animal_pk),
+
+    }
+
+    return render(request, 'content/onse_animal.html', context)
+
 
 
