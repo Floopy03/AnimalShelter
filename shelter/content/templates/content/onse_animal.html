@@ -2,12 +2,37 @@
 {% load static %}
 
 {% block css %}
-    <link rel="stylesheet" href="{% static 'content/css/onse_animal1.css' %}">
+    <link rel="stylesheet" href="{% static 'content/css/onse_animal0.css' %}">
 {% endblock %}
 
 
 {% block main %}
 
-<h2>{{ animal.name }}</h2>
+<article class = 'about'>
+    <section class = description-block>
+        <img class = 'main_photo' src="{{ animal.photo.url }}">
+        <section class = 'description'>
+            <h3>
+                {{animal.name}}
+            </h3>
+            <section class = 'basic'>
+                
+                <h5>
+                    {{animal.gender}}
+                </h5>
+                <h5>
+                    {{animal.age}}
+                </h5>
+
+            </section>
+            <p class = 'descr-text'>
+                {{ animal.description }}
+            </p>
+        </section>
+    </section>
+    <button class = 'donate-one-animal' type = 'button'>
+        Пригостити {{animal.treat_for_animal}}
+    </button>
+</article>
 
 {% endblock %}

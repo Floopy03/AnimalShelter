@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+nav {
+    display: flex ;
+    background: #1E656D;
+    height: 8vh;
+}
+
+
+.logo { 
+    display: flex;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.nav-link {
+    color: #D9B44A;
+    font-size: 18px;
+}
+
+.first_but {
+    background: #506D2F;
+    width: 5%;
+    height: 63%;
+    color: #F1F3CE;
+    border-radius: 10px;
+    margin-right: 1%;
+
+}
+
+
+.main_div {
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    background: #75B1A9;
+    width: 20%;
+    height: 92vh;
+    padding: 1% 0% 1% 0.3%;
+    justify-content: space-between;
+
+}
+
+.menu-link {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 1%;
+    color: #1E656D;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 500;
+    
+}
+
+.authorization-link {
+    display: flex;
+    margin-left: 1%;
+    color: #1E656D;
+    font-size: 20px;
+
+    
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ACD0C0;
+    width: 80%;
+    height: 92vh;
+
+}
+
+
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1%;
+    /* background: #000; */
+}
+
+.main_photo {
+    display: flex;
+    height: min-content;
+    max-width: 300px; /* Наприклад, встановимо максимальну ширину 100px */
+    max-height: 300px;
+    border-radius: 15px;
+}
+
+
+.description-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.description {
+    width: 60%;
+}
+
+
+.descr-text {
+    font-size: 18px;
+}
+
+
+.basic {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 1%;
+}
+
+
+.donate-one-animal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    width: 20%;
+    height: 50px;
+    margin: 2% 0% 0% 4%;
+    background: #D09683;
+    border-radius: 15px;
+}
+
+

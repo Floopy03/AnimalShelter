@@ -39,6 +39,20 @@ class Animal(models.Model):
             else:
                 return f'{self.old} місяців'
             
+    def gender(self):
+        return 'Хлопчик' if self.sex == 'B' else 'Дівчинка'
+    
+    def treat_for_animal(self):
+        if self.name[-1] == 'а':
+            return self.name[0:-1] + 'у'
+        
+        if self.name[-1] == 'я':
+            return self.name[0:-1] + 'ю'
+
+        else:
+           return self.name
+
+            
 
     def get_absolute_url(self):
         return reverse("one_animal", kwargs = {'animal_pk': self.pk})
