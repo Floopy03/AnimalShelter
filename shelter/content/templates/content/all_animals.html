@@ -2,8 +2,14 @@
 {% load static %}
 
 {% block css %}
-    <link rel="stylesheet" href="{% static 'content/css/all_animals1.css' %}">
+    <link rel="stylesheet" href="{% static 'content/css/all_animals.css' %}">
 {% endblock %}
+
+{% block js %}
+    <script defer src = "{% static 'content/js/main.js' %}"></script>
+{% endblock %}
+
+
 
 {% block main %}
 
@@ -18,7 +24,7 @@
                 <p class = 'animal-name'>{{each.name}}</p>
                 <p class = 'animal-old'>{{each.age}}</p>
             </div>
-            <button class = 'animal-details-but'><a href="{{ each.get_absolute_url }}">Перейти</a></button>
+            <a href="{{ each.get_absolute_url }}"><button class = 'animal-details-but'>Перейти</button></a>
         </section>
 
         

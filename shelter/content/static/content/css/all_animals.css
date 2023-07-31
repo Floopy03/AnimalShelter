@@ -52,16 +52,33 @@ aside {
 
 }
 
-.menu-link {
+.menu-but {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     margin-left: 1%;
     color: #1E656D;
-    text-decoration: none;
     font-size: 22px;
     font-weight: 500;
+    width: 90%;
     
 }
+
+
+.menu-but-link {
+    text-decoration: none;
+
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+    height: 90%;
+
+}
+
+
 
 .authorization-link {
     display: flex;
@@ -132,7 +149,7 @@ article {
 
 
 .animal-details-but {
-    width: 90%;
+    width: 120%;
     font-size: 13px;
     padding: 0;
     background: #75B1A9;

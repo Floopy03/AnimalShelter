@@ -2,7 +2,11 @@
 {% load static %}
 
 {% block css %}
-    <link rel="stylesheet" href="{% static 'content/css/onse_animal0.css' %}">
+    <link rel="stylesheet" href="{% static 'content/css/onse_animal.css' %}">
+{% endblock %}
+
+{% block js %}
+    <script defer src = "{% static 'content/js/main.js' %}"></script>
 {% endblock %}
 
 
@@ -30,9 +34,34 @@
             </p>
         </section>
     </section>
-    <button class = 'donate-one-animal' type = 'button'>
+    <button class = 'donate-one-animal' type = 'button' data-bs-toggle="modal" data-bs-target="#exampleModal">
         Пригостити {{animal.treat_for_animal}}
     </button>
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">{{ animal.name}} буде дуже 
+                {% if animal.sex == 'B' %}
+                  вдячний
+                {% else %}
+                  вдячна
+                {% endif %}
+                Вам.</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              MonoBank --> 5375 4141 0605 4121
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Вихід</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
 </article>
 
 {% endblock %}

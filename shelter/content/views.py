@@ -37,5 +37,3 @@ def onse_animal(request, animal_pk):
 
     return render(request, 'content/onse_animal.html', context)
 
-
-
